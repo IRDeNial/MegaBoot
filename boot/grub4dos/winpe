@@ -1,0 +1,10 @@
+timeout 1
+default 0
+
+title WinPE
+find --set-root /IMGS/WinPE_x86.iso
+map /IMGS/WinPE_x86.iso (hd32)
+map --hook
+root (hd32)
+chainloader (hd32)
+boot
